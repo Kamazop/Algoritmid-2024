@@ -6,12 +6,13 @@ while True:
   lisa = input("Kas soovid massiivi arvu lisada? yes/no:") # Küsib kasutajalt üle, kas ta soovib arvu lisada
   if lisa.lower() == "yes":
     try:
-      lisaint = in(input("Sisesta arv:")) # Kasutaja annab sisendi...
+      lisaint = int(input("Sisesta arv:")) # Kasutaja annab sisendi...
       x.append(lisaint) # see lisatakse massiivi lõppu
       print(f"Massiiv peale lisamist: {x}")
-
-else:
-  print(f"Praegune massiiv: {x}")
+    except ValueError:
+      print("Palun sisesta korrektne arv.")
+  else:
+    print(f"Praegune massiiv: {x}")
 
 kustuta = input("Kas soovid massiivi esimesena lisatud arvu kustutada? yes/no:")
 if kustuta.lower == "yes":

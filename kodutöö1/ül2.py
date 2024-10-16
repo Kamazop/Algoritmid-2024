@@ -1,4 +1,6 @@
-# FIFO struktuur
+# FIFO struktuur - järgib reeglit, kus esimene lisatud element massiivis kustutatakse esimesena.
+# Lisamine - ajaline keerukus O(1), lisamine toimub alati massiivi lõpus
+# Kustutamine - ajaline keerukus O(n), esimese elemendi kustutamisel peab alles jäävaid elemente nihutama.
 import array as massiiv
 
 x = massiiv.array("i", []) # Tekitab tühja massiivi, kuhu hakatakse elemente lisama

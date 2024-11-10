@@ -2,6 +2,8 @@
 # Ruumi- ja ajakompleksuse analüüs - Ruumikompleksus sellel algoritmil on O(1), kuna kasutab vaid paari muutujat ning
 # ta ei vaja täiendavat mälu kasvava sisendi suuruse jaoks. Ajakompleksus on O(n), sest algoritm peab läbima kogu massiivi, et
 # kindlaks teha, kas element on massiivis või mitte.
+# Kasutus reaalses maailmas - see algoritm on väikeste andmekogumite puhul efektiivne oma lihtsuse ja ruumikompleksuse poolest.
+# Piiranguks on selle algoritmi puhul see, et muutub aeglaseks suuremate massiividega töötamisel, sest iga elemendi läbi käimine võtab rohkem aega.
 def linear_search(massiiv, otsitav):  # Defineeritud funktsioon linear_search, argumendiks on "massiiv" ja otsitav element "otsitav"
     for i in range(len(massiiv)): # Käib läbi kõik massiivis olevad elemendid
         if massiiv[i] == otsitav: # Võrdleb kas hetkel valitud element on võrdne otsitava elemendiga

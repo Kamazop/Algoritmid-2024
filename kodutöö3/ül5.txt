@@ -1,0 +1,32 @@
+Otsingualgoritmide praktiline kasutamine toote otsimisel veebipoest.
+
+Binaarne otsing oleks sobilik eeldusel, et tooted on eelnevalt sorteeritud (toote nime/hinna) alusel ja andmete muutused pole sagedased.
+Binaarne otsing on sellise suure mahulise andmekogumiga ümberkäimiseks kiire algoritm, mis vähendab võimalikke vasteid poole võrra.
+Kuigi on ta kiire siis on tal ka puudusi. Ta otsib vaid täpseid vasteid, ehk kui päring sisaldab trükivigu või on tegu sünonüümidega, siis seda ei pruugi leida.
+Nagu ka eelnevalt mainitud, peavada andmed sorteeritud olema, sest kui ei ole siis tuleb enne otsingu tegemist andmed sortida, mis võib-olla ressursimahukas.
+Kui aga andmed on muutuvad või otsingupäringud võivad sisaldada vigu (kasutaja poolseid trükivigu), siis võiks lisafunktsioonina kasutada fuzzy otsingut,
+indekseerimist ja täiendavaid filtreerimis valikuid. Fuzzy otsingu puhul ei leita mitte vaid täpseid vasteid vaid pakutakse päringule ka sarnaseid tooteid,
+mis võiks olla seotud päringus oleva tootega. Täiendavate filtrite valikus võiks olla (hind/hinnavahemik, populaarsus, tootekategooria).
+Kõige tõhusam oleks indekseerimise rakendamine, ehk indeksi kasutamine (sõnade, kategooriate või hindade) järgi, et otsing toimuks kiiremini.
+
+Boonusülesanne
+
+Fibonacci otsing jaotab (sarnaselt kahendotsinguga) massiivi kaheks osaks fibonacci numbrite põhjal, kus massiiv on poolitatud ning pooled pole võrdsed.
+
+Stsenaarium: Börsihindade kiire leidmine massiivsetes ajalooandmetest.
+Oletame, et on suur börsiandmete massiiv, kus iga element esindab aktsiahinna väärtust aja järgi.
+Näiteks massiivis on suur hulk kirjeid, kus iga kirje sisaldab väärtust (aktsia hind) iga minuti kohta viimase aasta jooksul.
+Aktsiate hinnad võivad olla suhteliselt ühtlaselt jaotunud, kuid hindade vahemikud võivad olla suured ja sõltuda
+globaalsetest sündmustest ja turu kõikumistest.
+
+Fibonacci arvud (1, 2, 3, 5, 8, 13, 21 jne) on eksponentsiaalselt suurenevad, mis tähendab, et otsing võib alguses teha suuremaid hüppeid
+ja hiljem keskenduda väiksematele erinevustele. Ehk fibonacci otsing sobib hästi olukordades, kus massiiv on suur ja väärtused võivad olla suurte
+hüpetega jaotunud.
+
+Kahendotsing jagab massiivi pooleks igal sammul, mis on küll efektiivne, kuid kui massiivi suurus on väga suur, võib see olla vähem paindlikum kui
+Fibonacci otsing, mis töötab mitmekesiste vahedega.
+Kolmikotsing jaotab massiivi kolmeks osaks igal sammul, mis võib olla mäluintensiivne ja ei suuda kiiresti reageerida suurtele hinnaerinevustele.
+
+Fibonacci otsing võib sobida eriti hästi suurtesse ajalootehingutega andmebaasidesse, kus hinnad on pidevalt muutuvad. Kuna sellistes andmetes võivad väärtused
+muutuda järk-järgult ja kiiresti, saab Fibonacci otsing tõhusalt kasutada Fibonacci jada omadusi, et otsingut kohandada vastavalt sellele,
+kus turu liikumised on tugevamad ja kus hinnavahed on väiksemad.

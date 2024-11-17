@@ -1,0 +1,15 @@
+Kolmikotsing (Ternary search)
+Kolmikotsing jagab otsitav ala kolmeks, sarnaselt kahendotsinguga.
+Otsitavat otsitakse sellest kolmandikust, kus on suurem tõenäosus leida otsitav väärtus.
+Kolmikotsingu ajakompleksus O(log3(n)), kuna teeb 2 võrdlust iteratsiooni kohta ja kahendotsingul O(log2(n)), ehk siis kolmikotsingu ajaline keerukus on suurem ja on aeglasem.
+
+keskmine1 = vasak + (parem - vasak) / 3
+keskmine2 = parem - (parem - vasak) / 3
+
+    if f(keskmine1) < f(keskmine2):   // Maksimumi leidmine
+        vasak = keskmine1
+    else:
+        parem = keskmine2
+return (vasak + parem) / 2  // Tagastab maksimumi ligikaudse koha
+
+Binary search on sorditud massiivides üldiselt tõhusam kuna vajab vähem võrdlusi ja iteratsioonid on kiiremad.

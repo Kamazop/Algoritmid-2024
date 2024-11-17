@@ -1,0 +1,22 @@
+Jump search toimib põhimõttel kus massiivis olevate elementide summa ruutjuur võrdub hüppe suurusega.
+Hüppeid teeb seni kuniks jõuab elemendini, mis on suurem kui otsitav element ning seejärel läheb ühe hüppe võrra tagasi ning
+jätkab edasi lineaarotsinguga.
+
+Näitena saab tuua 8 elemendise massiivi: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Sammu suurus ehk hüppe suurus: ruutjuur 9-st = 3
+Otsitavaks on nr 6
+
+Hüpped:
+  - Hüpe indeksile 2, võrdleb otsitavat ja indeksi arvu 6 > 2, jätkab
+  - Hüpe indeksile 5, -,,- 6 > 5, jätkab
+  - Hüpe indeksile 8, -,,- 6 < 8, peatub ja läheb tagasi
+
+Jätkab edasi lineaarotsinguga:
+  - Eelmisel sammul läks tagasi ühe hüppe võrra, ehk alustab nüüd indeksilt 5
+  - 6 > 5, liigub 1 võrra edasi
+  - 6 = 6, otsitav väärtus leitud
+
+Jump search'i ajakompleksus: Hüpetega läbib osa massiivist kiiremini, mis vähendab lineaarse otsingu sammude arvu. 
+Parimal juhul on O(1), halvimal aga O(ruutjuur n), sest hüpetearv võrdub massiivi elementide summa ruutjuurega.
+Jump search võib-olla efektiivsem olukordades, kus näiteks massiiv on välismälus (kõvakettal) siis see vähendab lugemiste arvu välismälust võrreldes lineaarotsinguga.
+Kahendotsing kasutab tihti rekursiooni või lisamälu, kus heaks asenduseks oleks Jump search, mis on iteratiivne ja ei vaja lisamälu.

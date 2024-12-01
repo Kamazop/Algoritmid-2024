@@ -1,0 +1,28 @@
+Avatyd aadressimine on kokkupõrgete lahendamise meetod, kus kõik andmed salvestatakse samas räsitabelis, ilma eraldi struktuure kasutamata (nt linked listiid).
+Kui põrge toimub, otsitakse uus vaba pesa tabelis kindla algoritmi alusel. Põhimõte seisneb selles, et iga element otsib vastavalt räsifunktsioonile
+järgmise sobiva asukoha.
+  1. Arvutatakse räsifunktsiooni abil algne indeks.
+  2. Kui pesa on hõivatud, otsitakse järgmine vaba pesa sõltuvalt valitud meetodist (lineaarne, ruuduline või topleträsimine)
+
+Võrdlus:
+  1. Lineaarne otsing
+    - Kui põrge tekib, otsitakse järgmist saadaolevat pesa
+  2. Ruudline otsing
+    - Kasutab ruutfunktsiooni, et leida järgmine pesa
+    - Kui põrge tekib, liigub funktsioon indeksile, mis on väärtuse ruudu kaugusel
+  3. Topelträsimine
+    - Kasutab kahte räsifunktsiooni ühe asemel
+    - Esimene räsifunktsioon määrab iga võtme jaoks algse indeksi
+    - Teine määrab põrke korral võtme joaks uue indeksi
+    - Protsess jätkub, kuniks leitakse tühi pesa
+
+Millal oleks iga meetod kõige efektiivsem:
+  1. Lineaarne otsing
+      Parim - Kui räsitabel on suur ja täituvus on väike.
+      Näiteks - Väiksemates rakendustes, kus tabelisse salvestatakse piiratud arv elemente ja prioriteediks on jõudlus.
+  2. Ruuduline otsing
+      Parim - Kui tabel on mõõdukalt täidetud ja räsifunktsioon suudab vältida liigseid kokkupõrkeid.
+      Näiteks - Suuremates süsteemides, kus lineaarse otsingu klastri probleem võib muutuda oluliseks.
+  3. Topelträsimine
+      Parim - Kõrge täituvusega tabelites või süsteemides, kus on vaja tagada ühtlane jaotus ning vaja vältida klastri probleeme.
+      Näiteks - Turvakriitilised rakendused.

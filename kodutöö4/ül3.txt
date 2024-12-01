@@ -1,0 +1,27 @@
+Ajakompleksus võrldlus:
+  1. Separate Chaining
+      Keskmiselt O(1) hästi jaotatud andmetega.
+      Halvimal juhul O(n), kui kõik elemendid satuvad ühte linked listi.
+  2. Open Addressing
+      Keskmine O(1), kui täituvus on madal.
+      Halvimal juhul O(n), kui peab läbi otsima kõik kohad (lineaarne otsing).
+
+Ruumikompleksus võrdlus:
+  1. Separate Chaining
+      Massiivi suurus O(m), kus m on räsitabeli suurus.
+      Lisamälu O(n), kus n on salvestatud elementide arv (linked listid).
+  2. Open Addressing
+      Kogu mälu O(m), kus m on räsitabeli suurus.
+
+Separate Chaining kasutamise plussid ja miinused:
+  Plussid:
+    1. Paindlikkus - saab lisada rohkem elemente kui tabeli algne suurus
+    2. Efektiivne kõrge täituvusega tabelites - Kui tabel on tihedalt täis, siis põrgete lahendamine ei mõjuta otsingu efektiivsust.
+    3. Lihtne laiendada - Saab lisada rohkem linke olemasolevatesse pesadesse.
+  Miinused:
+    1. Lisamälu vajadus - Iga põrge vajab täiendavat mälu linked listide joaks.
+    2. Ebaühtlane jaotus - Kui räsifunktsioon ei jaota elemte ühtlaselt, tekivad suured linked listid, mis muudab operatsioonid aeglasemaks.
+    3. Keerukam mälu haldamine - Linked listide dünaamiline loomine ja kustutamine võib lisada keerukust.
+
+Kokkuvõtteks on Separate Chaining efektiivne, kui tabeli suurust ei saa täpselt ette määrata või kui andmed on tihedad.
+Open addressing on parem, kui mälupiirangud on olulised ja täituvus jääb madalaks.

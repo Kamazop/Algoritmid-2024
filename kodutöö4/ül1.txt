@@ -1,0 +1,35 @@
+Räsimise konseptsioon
+Räsimine on protsess, millega muudetakse suvalise pikkusega sisend kindla pikkusega väljundiks, mille nimeks on räsi (hash).
+Seal juures saadud väljundit ei tohi olla võimalik tagasi sisendiks genereerida.
+See arvutatakse välja räsifunktsiooni abil, mis rakendab matemaatilist algoritmi.
+
+Räsimist kasutatakse laialdaselt andmete kiireks otsimiseks ja võrdlemiseks.
+
+Räsi omadused:
+1. Ühtlane jaotus - Räsi väljundid peavad jaotuma ühtlaselt kogu võimaliku väärtuste ulatuses, et vältida ülekoormust.
+(See aitab tagada efektiivse jõudluse lisamis- ja otsinguoperatsioonide puhul)
+2. Korratavus - Sama sisendi korral peab räsifunktsioon genereerima alati sama väljundi.
+(Et tagada kindlus, et samad andmed vastavad alati samale räsi väärtusele)
+3. Kokkupõrgete väike tõenäosus - Kokkupõrge toimub siis, kui kaks erinevat sisendit annavad sama räsi väljundi. Hea räsifunktsioon
+minimeerib kokkupõrgete esinemis arvu.
+(Vähem kokkupõrkeid tagab parema andmete otsimise)
+
+Põrgete lahendamiseks kasutatakse kahte levinud tehnikat:
+1. Eraldatud aheldamine (Separate Chaining)
+    Iga räsitabeli pilu hoiab viidet andmestruktuurile (linked list), kuhu salvestatakse kõik kokkupärkeid tekitavad elemendid,
+    võimaldab mitmel võtmel eksisteerida samas räsitabeli asukohas.
+    Tugevused
+      - Võimaldab kasutada dünaamilist mäluhaldust
+      - Lihtne rakendada
+    Nõrkused
+      - Avatud aadresseerimine on kiirem väiksemate andmehulkade korral
+      - Väga pika linked listi puhul on otsing aeglane, halvim O(n)
+2. Avatud aadresseerimine (Open Addressing)
+    Kõik elemendid on salvestatud räsitabelis endas, sekundaarset andmestruktuuri pole.
+    Tugevused
+      - Kiirem, kui Eraldatud aheldamine
+      - Kasutab vähem mälu
+    Nõrkused
+      - Kui on väga palju andmeid, siis on tabel aeglane
+      - Raiskab mälu rohkem kui Eraldatud aheldamine
+      - Räsitabeli suurus on fikseeritud

@@ -2,8 +2,7 @@ Räsimise konseptsioon
 Räsimine on protsess, millega muudetakse suvalise pikkusega sisend kindla pikkusega väljundiks, mille nimeks on räsi (hash).
 Seal juures saadud väljundit ei tohi olla võimalik tagasi sisendiks genereerida.
 See arvutatakse välja räsifunktsiooni abil, mis rakendab matemaatilist algoritmi.
-
-Räsimist kasutatakse laialdaselt andmete kiireks otsimiseks ja võrdlemiseks.
+Räsimise eesmärgiks on andmete kaitse ja unikaalsete identifikaatorite loomine.
 
 Räsi omadused:
 1. Ühtlane jaotus - Räsi väljundid peavad jaotuma ühtlaselt kogu võimaliku väärtuste ulatuses, et vältida ülekoormust.

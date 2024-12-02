@@ -22,7 +22,7 @@ print(exists(index_map, 5))  # False
 #    Kontroll O(1)
 
 # Ruumikompleksus
-#    Mälu kasutus O(U), kus U on väärtuste ulatus.
+#    Mälu kasutus O(n), kus n on väärtuste ulatus.
 #    Kui väärtuste ulatus on suur ja enamik väärtusi puudub, kulub mälu ebaefektiivselt.
 
 # Kasutusvõimalused reaalses maailmas:
